@@ -80,6 +80,7 @@ WHERE table_name = '${table.table_name}'; `
       });
       return response?.data?.choices[0]?.text;
     } catch (err) {
+      console.error(err);
       throw new OpenaiError();
     }
   }
@@ -88,6 +89,7 @@ WHERE table_name = '${table.table_name}'; `
     try {
       return this.pg.raw(sql).then((r: SelectResult) => r.rows);
     } catch (err) {
+      console.error(err);
       throw new DatabaseQueryError();
     }
   }

@@ -21,6 +21,7 @@ export default async function handle(
     analyzerService.destroy();
     res.status(200).json({ tablesInfo, sql, sqlResponse });
   } catch (err) {
+    console.error(err);
     if (err instanceof Error) {
       res.status(400).json({ error: { message: err.message } });
     }
