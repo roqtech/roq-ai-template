@@ -16,6 +16,7 @@ export class AnalyzerService {
         searchPath: ["knex", "public"],
       });
     } catch (err) {
+      console.error(err);
       throw new DatabaseConnectionError();
     }
   }
