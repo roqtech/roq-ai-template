@@ -1,5 +1,5 @@
 /*
-  This component showcases the NotificationBell, and ChatMessageBell from ROQ 
+  This component showcases the NotificationBell, and ChatMessageBell from ROQ
 */
 
 import Head from "next/head";
@@ -38,6 +38,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             />
           </Link>
           <div className={styles.linksContainer}>
+            <Link href={routes.frontend.analyze}>DB Analyze</Link>
             <Link href={routes.frontend.invites}>Invites</Link>
 
             {/* ROQ Notification and Chat bell */}

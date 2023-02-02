@@ -13,6 +13,9 @@ export interface ServerConfigInterface {
     logoutURL: string;
     authSecret: string;
   };
+  openai: {
+    apiKey: string;
+  };
 }
 
 let serverConfig: ServerConfigInterface;
@@ -64,6 +67,9 @@ if (typeof window === "undefined") {
         .default("http://localhost:3000/api/auth/logout")
         .validateSync(process.env.ROQ_AUTH_LOGOUT_URL),
       authURL: yup.string().required().validateSync(process.env.ROQ_AUTH_URL),
+    },
+    openai: {
+      apiKey: yup.string().required().validateSync(process.env.OPENAI_API_KEY),
     },
   });
 }
