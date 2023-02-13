@@ -10,7 +10,11 @@ This is a [ROQ](https://roq.tech) project showcasing how to use ROQ UI widgets a
 ## Get started
 
 Step 1 - Setup your ROQ environment variables. Check the example .env.example file
-You can get the environment variables from the [ROQ Console](https://console.roq.tech)
+
+* Login to [ROQ Console](https://console.roq.tech) (opens in a new tab) and go to Project Details ➔ Settings.
+* Then add your base URL (usually it's http://localhost:3000/) and press the Save button (top right).
+* When this is done, you can press the Copy Env File button and copy the entire output.
+* Create a new file called .env in the root of your project and paste the content in.
 
 ```bash
 cp .env.example .env
