@@ -38,8 +38,17 @@ export default function AppLayout({ children }: AppLayoutProps) {
             />
           </Link>
           <div className={styles.linksContainer}>
-            <Link href={routes.frontend.analyze}>DB Analyze</Link>
-            <Link href={routes.frontend.invites}>Invites</Link>
+            <button
+              onClick={() => router.push(routes.frontend.analyze)}
+              className="btn btn-sm btn-action"
+              style={{ marginRight: 20 }}
+            >
+              DB Analyze
+            </button>
+
+            <Link href={routes.frontend.invites}>
+              Invites
+            </Link>
 
             {/* ROQ Notification and Chat bell */}
             <NotificationBell />
