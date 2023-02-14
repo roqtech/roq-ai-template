@@ -65,7 +65,7 @@ WHERE table_name = '${table.table_name}'; `
 
     const prompt = `
   ${dbPrompt}
-  ### Generate psql query with column and table names wrapped in double quotes for ${question}
+  ### Generate psql query with column and table names wrapped in double quotes for ${question}? use postgres.
   `;
 
     try {
